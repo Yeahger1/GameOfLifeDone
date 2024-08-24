@@ -4,19 +4,17 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Loader : MonoBehaviour
+public class SceneManagerScript : MonoBehaviour
 {
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            Play();
+        }
+    }
     public void Play()
     {   
-        SceneManager.LoadScene("GameOfLife");
-    }
-    public void ExitGame()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
+        SceneManager.LoadScene("TheDryadShowcase");
+    }    
 }
